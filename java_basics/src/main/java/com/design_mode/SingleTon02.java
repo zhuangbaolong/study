@@ -2,7 +2,13 @@ package com.design_mode;
 
 //懒汉式的单例模式
 public class SingleTon02 {
-
+    public static void main(String[] args) {
+        Cat instance = Cat.getInstance();
+        System.out.println(instance);
+        Cat instance2 = Cat.getInstance();
+        System.out.println(instance2);
+        System.out.println(instance == instance2);
+    }
 }
 class Cat{
     private String name;

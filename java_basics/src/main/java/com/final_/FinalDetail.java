@@ -7,6 +7,7 @@ public class FinalDetail {
 }
 //final 和 static 往往搭配使用，效率更高，不会导致类加载.底层编译器做了优化处理
 class BB{
+    //final 和 static 往往搭配使用，效率更高，不会导致类加载.底层编译器做了优化处理
     public final static int num = 100;
     static {
         System.out.println("BB 静态代码块被执行");
