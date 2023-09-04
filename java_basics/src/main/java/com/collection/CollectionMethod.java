@@ -13,24 +13,24 @@ public class CollectionMethod {
         System.out.println("list=" + list);
         //remove:删除指定元素
         //list.remove(0);//删除第一个元素
-        list.remove(2);
+        list.remove("jack");//指定删除某个元素
         System.out.println("list=" + list);
         //contains:查找元素是否存在
         System.out.println(list.contains("jack"));
-        //        size:获取元素个数
+        // size:获取元素个数
         System.out.println(list.size());
-        //        isEmpty:判断是否为空
+        // isEmpty:判断是否为空
         System.out.println(list.isEmpty());
-        //        clear:清空
+        // clear:清空(慎重)
         list.clear();
         System.out.println("list=" + list);
-        //        addAll:添加多个元素
+        // addAll:添加多个元素
         ArrayList list2 = new ArrayList();
         list2.add("红楼梦");
         list2.add("三国演义");
         list.addAll(list2);
         System.out.println("list=" + list);
-        //        containsAll:查找多个元素是否都存在
+        // containsAll:查找多个元素是否都存在
         System.out.println(list.containsAll(list2));//T
 //        removeAll：删除多个元素
         list.add("聊斋");
