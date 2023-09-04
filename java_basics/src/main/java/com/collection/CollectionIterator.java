@@ -12,9 +12,7 @@ public class CollectionIterator {
         collection.add(new Book("红楼梦", "曹雪芹", 34.6));
         //遍历 col集合
         Iterator iterator = collection.iterator();
-        //快捷键itit,ctrl+j提示
         while (iterator.hasNext()) {
-            //编译类型,运行类型是book
             Object next = iterator.next();
             System.out.println(next);
         }
