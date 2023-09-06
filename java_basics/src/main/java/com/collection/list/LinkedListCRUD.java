@@ -1,4 +1,4 @@
-package com.collection;
+package com.collection.list;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -12,7 +12,7 @@ public class LinkedListCRUD {
         System.out.println("linkedList=" + linkedList);
 
         //演示一个删除结点的
-//        linkedList.remove();// 这里默认删除的是第一个结点
+        linkedList.remove();// 这里默认删除的是第一个结点
         linkedList.remove(2);
         System.out.println("linkedList=" + linkedList);
 
