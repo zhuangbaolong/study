@@ -1,4 +1,4 @@
-package com.wrapper;
+package com.wrapper.string;
 
 public class String01 {
     public static void main(String[] args) {

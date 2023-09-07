@@ -36,5 +36,6 @@ public class SetMethod {
         for (Object o : set) {
             System.out.println("o:"+o);
         }
+        //没有get方法，不能通过索引查找
     }
 }

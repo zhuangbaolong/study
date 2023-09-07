@@ -1,6 +1,6 @@
 package com.collection;
 
-class Dog { //定义了Dog类
+public class Dog { //定义了Dog类
     private String name;
 
     public Dog(String name) {

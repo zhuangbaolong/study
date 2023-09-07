@@ -1,6 +1,6 @@
-package com.wrapper;
+package com.wrapper.string;
 
-public class StringBufferMethod {
+public class StringAndStringBuffer {
     public static void main(String[] args) {
         //看 String——>StringBuffer
         String str = "hello tom";

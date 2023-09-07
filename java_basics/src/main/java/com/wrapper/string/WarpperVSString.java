@@ -1,4 +1,4 @@
-package com.wrapper;
+package com.wrapper.string;
 
 //类型转换
 public class WarpperVSString {

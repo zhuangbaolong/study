@@ -15,6 +15,7 @@ public class ArraysMethod02 {
 
         //fill 数组元素的填充
         Integer[] num = new Integer[]{9,3,2};
+        System.out.println(Arrays.toString(num));
         //老韩解读
         //1. 使用 99 去填充 num数组，可以理解成是替换原理的元素
         Arrays.fill(num, 99);

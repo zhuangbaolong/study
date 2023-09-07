@@ -1,6 +1,6 @@
-package com.wrapper;
+package com.wrapper.string;
 
-public class StringAndStringBuffer {
+public class StringBufferMethod {
     public static void main(String[] args) {
         //看 String——>StringBuffer
         String str = "hello tom";
@@ -10,7 +10,7 @@ public class StringAndStringBuffer {
         //方式2 使用的是append方法
         StringBuffer stringBuffer1 = new StringBuffer();
         stringBuffer1 = stringBuffer1.append(str);
-
+        System.out.println(stringBuffer1);
         //看看 StringBuffer ->String
         StringBuffer stringBuffer3 = new StringBuffer("韩顺平教育");
         //方式1 使用StringBuffer提供的 toString方法
