@@ -1,5 +1,7 @@
 package com.generic;
 
+import java.util.Objects;
+
 public class MyDate implements Comparable<MyDate> {
 
     private int year;
@@ -43,6 +45,19 @@ public class MyDate implements Comparable<MyDate> {
                 ", month=" + month +
                 ", day=" + day +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyDate)) return false;
+        MyDate myDate = (MyDate) o;
+        return year == myDate.year && month == myDate.month && day == myDate.day;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(year, month, day);
     }
 
     @Override
