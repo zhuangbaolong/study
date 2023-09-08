@@ -1,4 +1,4 @@
-package com.collection.set;
+package com.collection.set.exercise;
 
 import com.generic.MyDate;
 
