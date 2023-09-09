@@ -4,6 +4,10 @@ public class Dog {
     public String name;
     public int age;
 
+    public Dog(String name) {
+        this.name = name;
+    }
+
     public Dog(String name, int age) {
         this.name = name;
         this.age = age;
