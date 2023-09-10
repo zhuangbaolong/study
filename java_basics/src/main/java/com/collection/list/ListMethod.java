@@ -28,7 +28,7 @@ public class ListMethod {
         list.set(2,"jia");
         System.out.println(list);
         //sublist返回子集合
-        List list1 = list.subList(0, 1);
+        List list1 = list.subList(0, 1);//jack
         System.out.println("returnList:"+list1);
     }
 }

@@ -46,6 +46,45 @@ study
 
 
 
+14.4 List接口
+1. 特征
+![img_3.png](img_3.png)
+2. 常用方法 ListMethod
+   1. void add(int index,Object ele):在index位置插入元素ele
+   2. boolean addAll()
+   3. Object get(int index):获取
+   4. int indexOf(Object obj)：返回obj在集合首次出现的位置
+   5. int lastIndexOf(Object obj)
+   6. Object remove(int index)
+   7. Object set(int index,Object ele):替换
+   8. List subList(int fromIndex,int toIndex):返回从fromIndex到toIndex 之间的子集合
+14.5 ArrayList类
+1. 注意：
+   1. 可以加入多个null，可以重复
+   2. 基本等同于Vector，但ArrayList线程不安全，(没有synchronized),多线程不适用
+   3. 底层由数组实现数据存储的。**ArrauListSource**
+      1. 底层维护了Object类型的数组elementData. transient（表示该属性不会序列化） Object[] elementData.
+      2. 当创建对象时，如果使用无参构造器，初始elementData的容量为0，第一次添加需要扩容，扩容elementData为**10**，再次扩容按1.5倍
+      3. 当添加元素时，先判断是否需要扩容，调用grow方法，否则直接添加元素到合适位置。
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+![img_4.png](img_4.png)
+
+14.9 Set接口
+
+14.10 Set接口实现类-**HashSet**
+1. 实现了Set接口
+2. 实际上是HashMap
+3. 可以存放一个null
+4. 不保证元素是有序的，取决于hash后，再确定索引的结果
+5. 不能有重复的元素
+6. 具体add()方法看代码HashSet01
+7. == 底层 ==
+![img_1.png](img_1.png)
+8. == 扩容机制 ==
+![img_2.png](img_2.png)
+9. 
+
 14.12.3 map接口遍历方法
 ![img.png](img.png)
 具体参考MapFor类。

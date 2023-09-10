@@ -30,5 +30,9 @@ public class HashSet01 {
         set.add(new Dog("tom"));//Ok
         System.out.println("set=" + set);
 
+        //★看源码
+        set.add(new java.lang.String("hsp"));//ok
+        set.add(new java.lang.String("hsp"));//加入不了
+        System.out.println(set);
     }
 }

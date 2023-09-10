@@ -5,6 +5,7 @@ import com.collection.Book;
 import java.util.ArrayList;
 import java.util.List;
 
+//联系排序
 public class ListExercise {
     public static void main(String[] args) {
         List list = new ArrayList<>();
