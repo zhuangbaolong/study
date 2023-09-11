@@ -33,7 +33,7 @@ public class HashSetSource {
                 Node<K,V>[] tab; Node<K,V> p; int n, i; //定义了辅助变量
                 //table 就是 HashMap 的一个数组，类型是 Node[]
                 //if 语句表示如果当前table 是null, 或者 大小=0
-                //就是第一次扩容，到16个空间.
+                //resize()扩容，就是第一次扩容，到16个空间.
                 if ((tab = table) == null || (n = tab.length) == 0)
                     n = (tab = resize()).length;
 
@@ -71,8 +71,8 @@ public class HashSetSource {
                           //    只有上面条件不成立时，才进行转成红黑树
                           //(2) 依次和该链表的每一个元素比较过程中，如果有相同情况,就直接break
 
-                        for (int binCount = 0; ; ++binCount) {
-                            if ((e = p.next) == null) {
+                        for (int binCount = 0; ; ++binCount) {//死循环遍历链表
+                            if ((e = p.next) == null) {//如果整个链表没有和他相同的，则加入到该链表的最后
                                 p.next = newNode(hash, key, value, null);
                                 if (binCount >= TREEIFY_THRESHOLD(8) - 1) // -1 for 1st
                                     treeifyBin(tab, hash);

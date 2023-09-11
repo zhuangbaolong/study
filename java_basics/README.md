@@ -48,7 +48,7 @@ study
 
 14.4 List接口
 1. 特征
-![img_3.png](img_3.png)
+![img_3.png](img/img_3.png)
 2. 常用方法 ListMethod
    1. void add(int index,Object ele):在index位置插入元素ele
    2. boolean addAll()
@@ -66,9 +66,9 @@ study
       1. 底层维护了Object类型的数组elementData. transient（表示该属性不会序列化） Object[] elementData.
       2. 当创建对象时，如果使用无参构造器，初始elementData的容量为0，第一次添加需要扩容，扩容elementData为**10**，再次扩容按1.5倍
       3. 当添加元素时，先判断是否需要扩容，调用grow方法，否则直接添加元素到合适位置。
-![img_5.png](img_5.png)
-![img_6.png](img_6.png)
-![img_4.png](img_4.png)
+![img_5.png](img/img_5.png)
+![img_6.png](img/img_6.png)
+![img_4.png](img/img_4.png)
 
 14.9 Set接口
 
@@ -80,11 +80,11 @@ study
 5. 不能有重复的元素
 6. 具体add()方法看代码HashSet01
 7. == 底层 ==
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 8. == 扩容机制 ==
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 9. 
 
 14.12.3 map接口遍历方法
-![img.png](img.png)
+![img.png](img/map.png)
 具体参考MapFor类。
