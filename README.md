@@ -71,7 +71,7 @@ study
    2. 基本等同于Vector，但ArrayList线程不安全，(没有synchronized),多线程不适用
    3. 底层由**数组**实现数据存储的。**ArrauListSource**
       1. 底层维护了Object类型的数组elementData. transient（表示该属性不会序列化） Object[] elementData.
-      2. 当创建对象时，如果使用无参构造器，初始elementData的容量为0，第一次添加需要扩容，扩容elementData为**10**，再次扩容按**1.5倍**
+      2. 当创建对象时，如果使用无参构造器，**初始**elementData的容量为**0**，第一次添加需要扩容，扩容elementData为**10**，再次扩容按**1.5倍**
       3. 当添加元素时，先判断是否需要扩容，调用grow方法，否则直接添加元素到合适位置。
          ![img_5.png](img_5.png)
          ![img_6.png](img_6.png)
@@ -103,15 +103,20 @@ study
 6. 具体add()方法看代码HashSet01
 7. == 底层 ==
    ![img_1.png](img_1.png)
-8. == 扩容机制 == 初始16，到达加载因子0.75的容量时候扩容
+8. == 扩容机制 == **初始16**，到达加载因子0.75的容量时候扩容
    ![img_2.png](img_2.png)
-9.
+
+14.11 LinkedHashSet
+![img_9.png](img_9.png)
+![img_10.png](img_10.png)
+
+TreeSet
 
 14.12.3 map接口遍历方法
 ![img.png](img.png)
 具体参考MapFor类。
 14.12Map接口
-1. Map接口实现类的特点
+1. Map接口实现类HashMap的特点
    1. Map与Collection，用于保存具有映射关系的数据。
       2. Map中的key和value可以是任何引用类型的数据，会封装到**HashMap$Node**对象中存储数据
       3. Map的key不能重复，value可以重复，key和value可以有null
@@ -139,7 +144,7 @@ Set entrySet = map.entrySet();
 //遍历，注意entry为Map.Entry类。
 ```
 4. 实现类HashMap底层机制
-   1. HashMap底层维护了Node类型的数组table，默认为null
+   1. HashMap底层维护了Node类型的数组table，**默认为null**
    2. 当创建对象时，将加载因子(loadfactor)初始化为0.75
    3. 当添加key-value时，通过key的哈希值得到在table的索引，判断该索引处是否有元素，如果没有元素则直接添加。
       如果相等则替换原来的vlue；如果不相等则需要判断是树结构还是链表结构，做出相应处理。如果容量不够则扩容。
@@ -147,3 +152,19 @@ Set entrySet = map.entrySet();
    5. 之后扩容则需要扩容table容量的2倍（32），临界值（threshold）也为原来的2倍（24），以此类推
    6. 在java8中，如果一条链表的元素个数超过TREEIFY_THRESHOLD（默认8）,并且table的大小>=MIN_TREEIFY_CAPACITY(64),
       则进行树化（红黑树）。
+
+14.14 Hashtable
+1. 特点
+   1. 存放元键值对k-v
+   2. 键值对都不能存放null，否则抛出NullPointerException
+   3. 使用方法和HashMap一样。
+   4. Hashtable线程安全，HashMap线程不安全
+2. 底层
+   1. 底层有数组Hashtable$Entry[] 初始化大小为11.
+   2. 临界值 threshold = 11*0.75=8
+   3. 当if(count >= threshold)满足时，进行扩容
+   4. 按照 int newCapacity = (oldCapacity << 1) + 1; 的大小扩容
+   5. 添加方法 addEntry(hash, key, value, index); 添加k-v封装到Entry
+
+TreeMap
+![img_11.png](img_11.png)
