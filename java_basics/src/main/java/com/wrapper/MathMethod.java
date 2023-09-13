@@ -23,7 +23,7 @@ public class MathMethod {
         //6.sqrt 求开方
         double sqrt = Math.sqrt(9.0);
         System.out.println(sqrt);//3.0
-        //7.random 求随机数
+        //7.random 求随机数 ★★
         //  random 返回的是 0 <= x < 1 之间的一个随机小数
         // 思考：请写出获取 a-b之间的一个随机整数,a,b均为整数 ，比如 a = 2, b=7
         //  即返回一个数 x  2 <= x <= 7
