@@ -14,6 +14,7 @@ public class SingleTon01 {
 class GirlFriend {
     private String name;
 
+    //为了能够在静态方法中，返回gf对象，需要将其修饰为static。类加载这个方法执行一次创建好=》饿汉式
     private static GirlFriend gf = new GirlFriend("小红红");
 
     /*
